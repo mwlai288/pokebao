@@ -15,17 +15,18 @@ body {
   box-sizing: border-box;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 650px;
-  padding: 0 2rem;
-}
+// .container {
+//   margin: 0 auto;
+//   max-width: 650px;
+//   padding: 0 2rem;
+// }
 
 .wrapper {
   height: 6.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 4rem;
   @media screen and (min-width: 1024px) {
     justify-content: space-between;
   }
