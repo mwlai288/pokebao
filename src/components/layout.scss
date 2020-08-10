@@ -13,6 +13,7 @@ html {
 
 body {
   box-sizing: border-box;
+  font-family: Lato;
 }
 
 // .container {
@@ -83,6 +84,45 @@ body {
     }
     @media only screen and (min-width: 1024px) {
       display: none;
+    }
+  }
+}
+
+.headline {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  /* Background styles */
+  background-image: url(https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &__container {
+    border: 1px solid black;
+    margin: 10rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 25px;
+
+    &--title {
+      font-size: 4rem;
+    }
+    &--options {
+      font-size: 2rem;
+      padding: 20px 0 20px 0;
+    }
+    button {
+      border-radius: 5px;
+      border: none;
+      font-size: 1.4rem;
+      height: 30px;
+      width: 10rem;
+      a {
+        text-decoration: none;
+      }
     }
   }
 }
