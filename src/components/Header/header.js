@@ -1,11 +1,19 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import img from "../../images/PokeBoba.jpg"
 import DesktopNav from "./desktopNav"
 import MobileNav from "./mobileNav"
 
 const Header = ({ siteTitle }) => {
-  let width = window.innerWidth
+  const [isDesktop, setDesktop] = useState(window.innerWidth >= 768)
+  const updateMedia = () => {
+    setDesktop(window.innerWidth >= 768)
+  }
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia)
+    return () => window.removeEventListener("resize", updateMedia)
+  })
+  // let width = window.innerWidth
   return (
     <header>
       <nav className="wrapper">
@@ -13,7 +21,7 @@ const Header = ({ siteTitle }) => {
           <img src={img} alt={siteTitle} className="wrapper__home--logo" />
         </a>
 
-        {width >= 768 ? <DesktopNav /> : <MobileNav />}
+        {isDesktop ? <DesktopNav /> : <MobileNav />}
       </nav>
     </header>
   )
