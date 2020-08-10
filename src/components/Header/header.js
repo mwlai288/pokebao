@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
+import img from "../../images/PokeBoba.jpg"
 
 const Header = ({ siteTitle }) => {
   const [isToggled, setIsToggled] = useState(false)
@@ -7,8 +8,8 @@ const Header = ({ siteTitle }) => {
   return (
     <header>
       <nav className="wrapper">
-        <a href="#!" className="wrapper__home">
-          Poké Bao
+        <a href="/" className="wrapper__home">
+          <img src={img} alt={siteTitle} className="wrapper__home--logo" />
         </a>
         <div onClick={() => setIsToggled(!isToggled)}>
           <div className={`wrapper__burger ${openClass}`}>
