@@ -15,8 +15,13 @@ body {
   box-sizing: border-box;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 650px;
+  padding: 0 2rem;
+}
+
 .wrapper {
-  border-bottom: indigo 2px solid;
   height: 6.5rem;
   display: flex;
   justify-content: space-between;
@@ -27,7 +32,6 @@ body {
   &__home {
     text-decoration: none;
     font-size: 2.3rem;
-    margin-left: 2rem;
     @media only screen and (min-width: 1024px) {
       margin-left: 18rem;
     }
@@ -46,8 +50,28 @@ body {
     }
   }
   &__burger {
-    border: 5px solid black;
-    margin-right: 2rem;
+    background-color: #000000;
+    height: 3px;
+    width: 30px;
+    position: relative;
+    & > span::before {
+      content: "";
+      background-color: #000000;
+      position: absolute;
+      top: -8px;
+      width: 30px;
+      height: 3px;
+      z-index: 1;
+    }
+    & > span::after {
+      content: "";
+      background-color: #000000;
+      position: absolute;
+      top: 8px;
+      width: 30px;
+      height: 3px;
+      z-index: 1;
+    }
     @media only screen and (min-width: 1024px) {
       display: none;
     }
