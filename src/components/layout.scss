@@ -1,0 +1,96 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  border-bottom: indigo 2px solid;
+  height: 14vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (min-width: 1024px) {
+    justify-content: space-between;
+  }
+  &__home {
+    text-decoration: none;
+    font-size: 2.3rem;
+    margin-left: 2rem;
+    @media only screen and (min-width: 1024px) {
+      margin-left: 18rem;
+    }
+  }
+  &__links {
+    display: none;
+    @media only screen and (min-width: 1024px) {
+      display: flex;
+      font-size: 1.5rem;
+      margin-right: 17rem;
+      justify-content: space-evenly;
+      width: 25%;
+      & > * {
+        text-decoration: none;
+      }
+    }
+  }
+  &__burger {
+    border: 5px solid black;
+    margin-right: 2rem;
+    @media only screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
+}
+
+// @media only screen and (min-width: 1024px ) {}
+
+// @media only screen and (max-width: 428px) {
+//   .wrapper {
+//     border: 3px solid green;
+//     width: 100%;
+//   }
+//   .wrapper__links {
+//     display: none;
+//   }
+// }
+// .header {
+//   width: 100%;
+
+//   border-bottom: 1px solid green;
+
+//   .wrapper {
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: baseline;
+//     height: 18vh;
+//     &__home {
+//       font-size: 4rem;
+//       text-decoration: none;
+//       padding-top: 2rem;
+//       padding-bottom: 2rem;
+//     }
+
+//     &__links {
+//       font-size: 1.8rem;
+//       // border: 4px solid orange;
+//       display: flex;
+//       justify-content: space-between;
+//       width: 35%;
+//       & > * {
+//         text-decoration: none;
+//       }
+//     }
+//   }
+// }
