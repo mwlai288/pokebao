@@ -189,6 +189,51 @@ body {
     }
   }
 }
+
+.menu,
+.info {
+  margin: 7rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    font-size: 2rem;
+  }
+  &__poke {
+    margin-top: -3rem;
+    margin-bottom: 1rem;
+    h3 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    p {
+      font-size: 1.5rem;
+      text-align: justify;
+    }
+  }
+  &__bao {
+    margin-bottom: 1rem;
+    h3 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    p {
+      font-size: 1.5rem;
+      text-align: justify;
+    }
+  }
+  &__boba {
+    h3 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    p {
+      font-size: 1.5rem;
+      text-align: justify;
+    }
+  }
+}
 // @media only screen and (min-width: 1024px ) {}
 
 // @media only screen and (max-width: 428px) {
