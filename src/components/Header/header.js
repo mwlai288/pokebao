@@ -29,7 +29,6 @@ const Header = ({ siteTitle }) => {
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-  isToggled: PropTypes.bool.isRequired,
 }
 
 Header.defaultProps = {
