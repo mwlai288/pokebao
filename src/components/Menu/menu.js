@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 const Menu = () => {
@@ -17,7 +16,7 @@ const Menu = () => {
 
   return (
     <>
-      <section className="menu">
+      <section id="menu" className="menu">
         <h4 className="menu__title">Our Menu</h4>
         <img
           src="http://placekitten.com/400/300"

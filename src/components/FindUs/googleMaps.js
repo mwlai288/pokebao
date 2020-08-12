@@ -10,7 +10,7 @@ const GoogleMap = props => {
     <div className="find__map">
       {isClient && (
         <GoogleMapReact
-          bootstrapURLKeys={{ key: process.envGOOGLE_MAPS_API_KEY }}
+          bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API_KEY }}
           defaultCenter={center}
           defaultZoom={zoom}
         >

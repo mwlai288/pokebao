@@ -17,7 +17,7 @@ const About = () => {
   `)
 
   return (
-    <section className="about">
+    <section id="about" className="about">
       <h3 className="about__title">About Us</h3>
       <article className="about__message">
         {data.site.siteMetadata.about}

@@ -7,8 +7,8 @@
 }
 
 html {
-  // This defines what 1rem is
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -283,44 +283,3 @@ body {
     color: #3b5998;
   }
 }
-
-// @media only screen and (min-width: 1024px ) {}
-
-// @media only screen and (max-width: 428px) {
-//   .wrapper {
-//     border: 3px solid green;
-//     width: 100%;
-//   }
-//   .wrapper__links {
-//     display: none;
-//   }
-// }
-// .header {
-//   width: 100%;
-
-//   border-bottom: 1px solid green;
-
-//   .wrapper {
-//     display: flex;
-//     justify-content: space-around;
-//     align-items: baseline;
-//     height: 18vh;
-//     &__home {
-//       font-size: 4rem;
-//       text-decoration: none;
-//       padding-top: 2rem;
-//       padding-bottom: 2rem;
-//     }
-
-//     &__links {
-//       font-size: 1.8rem;
-//       // border: 4px solid orange;
-//       display: flex;
-//       justify-content: space-between;
-//       width: 35%;
-//       & > * {
-//         text-decoration: none;
-//       }
-//     }
-//   }
-// }

@@ -21,10 +21,38 @@ const MobileNav = () => {
       <animated.div className="nav-wrapper" style={navAnimation}>
         <nav>
           <a href="#">Welcome</a>
-          <a href="#">About Us</a>
-          <a href="#">Menu</a>
-          <a href="#">Gallery</a>
-          <a href="#">Find</a>
+          <a
+            href="#about"
+            onClick={() => {
+              setIsToggled(!isToggled)
+            }}
+          >
+            About Us
+          </a>
+          <a
+            href="#menu"
+            onClick={() => {
+              setIsToggled(!isToggled)
+            }}
+          >
+            Menu
+          </a>
+          <a
+            href="#gallery"
+            onClick={() => {
+              setIsToggled(!isToggled)
+            }}
+          >
+            Gallery
+          </a>
+          <a
+            href="#findUs"
+            onClick={() => {
+              setIsToggled(!isToggled)
+            }}
+          >
+            Find
+          </a>
         </nav>
       </animated.div>
     </>

@@ -21,7 +21,7 @@ const FindUs = () => {
   `)
 
   return (
-    <section className="find">
+    <section id="findUs" className="find">
       <div className="find__map-container">
         <GoogleMap />
       </div>

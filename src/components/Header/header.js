@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => {
     window.addEventListener("resize", updateMedia)
     return () => window.removeEventListener("resize", updateMedia)
   })
-  // let width = window.innerWidth
+
   return (
     <header>
       <nav className="wrapper">
