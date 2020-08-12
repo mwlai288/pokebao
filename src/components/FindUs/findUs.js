@@ -1,12 +1,7 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import GoogleMap from "./googleMaps"
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaPhone,
-  FaMapMarkerAlt,
-} from "react-icons/fa"
+import { FaFacebookF, FaPhone, FaMapMarkerAlt } from "react-icons/fa"
 
 const FindUs = () => {
   const data = useStaticQuery(graphql`
@@ -20,11 +15,18 @@ const FindUs = () => {
     }
   `)
 
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 768)
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 768)
+  }
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia)
+    return () => window.removeEventListener("resize", updateMedia)
+  })
+
   return (
     <section id="findUs" className="find">
-      <div className="find__map-container">
-        <GoogleMap />
-      </div>
+      {isDesktop && <GoogleMap />}
       <div className="find__links">
         <h1>Follow Us</h1>
         <span>
@@ -35,13 +37,6 @@ const FindUs = () => {
           >
             <FaFacebookF className="facebook-icon" />
           </a>
-          {/* <a
-            href="http://instagram.com/poke_bao"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram />
-          </a> */}
         </span>
       </div>
       <div className="find__contact">

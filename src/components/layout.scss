@@ -274,11 +274,8 @@ body {
   flex-direction: column;
   height: 200px;
   justify-content: space-evenly;
+  position: relative;
 
-  &__map {
-    height: 300px;
-    width: 300px;
-  }
   .facebook-icon {
     color: #3b5998;
   }
