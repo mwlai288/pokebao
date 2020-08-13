@@ -280,3 +280,167 @@ body {
     color: #3b5998;
   }
 }
+
+
+
+NEW STUFFFF!!!!
+
+@import url('https://fonts.googleapis.com/css2?family=Kristi&family=Lato:wght@300;400&display=swap');
+
+// COLORS //
+$title-color: #cfa670;
+$primary-color: #f0f0f0;
+$secondary-color: #903030;
+$tertiary-color: #beeaf4;
+// COLORS //
+
+// MARGINS //
+// $bottom-margin: 0
+// MARGINS //
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-color: #fcefee;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  padding: 2.5em 0;
+}
+
+.title {
+  font-family: "Kristi", cursive, sans-serif;
+  color: $title-color;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .title {
+    font-size: 6em;
+    margin-bottom: -5rem;
+  }
+
+  &__container--title {
+    color: $primary-color;
+    font-size: 4em;
+    margin-bottom: 0;
+  }
+  &__container--options {
+    color: $primary-color;
+    font-size: 2em;
+  }
+
+  button {
+    font-size: 2em;
+    height: 2em;
+    border-radius: 10px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  background-repeat: no-repeat;
+  background-image: url(https://secureservercdn.net/198.71.233.109/k6v.cc6.myftpupload.com/wp-content/uploads/2019/07/bamboo-back.jpg?time=1581828669);
+  background-size: cover;
+  background-position: center top;
+  // position: absolute;
+  top: 0px;
+  left: 0px;
+
+  width: 100%;
+  // height: 100%;
+}
+
+.about {
+  background-color: $tertiary-color;
+  border-radius: 25px;
+  padding: 1em;
+  position: relative;
+  width: 100%;
+  .title {
+    position: absolute;
+    top: -8rem;
+    left: 0;
+    font-size: 4rem;
+  }
+
+  &__message {
+    font-size: 1.6rem;
+    // line-height: 1.2;
+  }
+
+  .us {
+    text-align: center;
+
+    .us__text--header {
+      text-decoration: underline;
+      font-size: 1.6rem;
+      margin-bottom: -0.5rem;
+    }
+    .us__text--body {
+      font-size: 1.3rem;
+    }
+
+    &__image {
+      mix-blend-mode: multiply;
+    }
+  }
+}
+
+.menu {
+  background-color: $tertiary-color;
+  border-radius: 25px;
+  padding: 1em;
+  position: relative;
+  width: 100%;
+  margin-top: -2rem;
+  .title {
+    position: absolute;
+    top: -8.5rem;
+    left: 0;
+    font-size: 4rem;
+  }
+
+  &__image {
+    margin-top: 2rem;
+  } 
+
+  &__heading {
+    font-size: 1.8rem;
+    color: $secondary-color;
+    margin: 1.2rem 0;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+}
