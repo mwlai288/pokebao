@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import GoogleMap from "./googleMaps"
 import { FaFacebookF, FaPhone, FaMapMarkerAlt } from "react-icons/fa"
+import ContactUs from "./contactUs"
 
 const FindUs = () => {
   const data = useStaticQuery(graphql`
@@ -49,7 +50,7 @@ const FindUs = () => {
       </div>
       {/* Netlify Form */}
       <div className="find__forms">
-        <p>Email</p>
+        <ContactUs />
         {/* Netlify Form */}
       </div>
     </section>
