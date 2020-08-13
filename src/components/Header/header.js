@@ -17,11 +17,12 @@ const Header = ({ siteTitle }) => {
   return (
     <header>
       <nav className="wrapper">
-        <a href="/" className="wrapper__home">
+        {/* <a href="/" className="wrapper__home">
           <img src={img} alt={siteTitle} className="wrapper__home--logo" />
-        </a>
-
-        {isDesktop ? <DesktopNav /> : <MobileNav />}
+        </a> */}
+        <div className="container">
+          {isDesktop ? <DesktopNav /> : <MobileNav />}
+        </div>
       </nav>
     </header>
   )

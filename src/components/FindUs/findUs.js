@@ -26,32 +26,34 @@ const FindUs = () => {
   })
 
   return (
-    <section id="findUs" className="find">
-      {isDesktop && <GoogleMap />}
-      <div className="find__links">
-        <h1>Follow Us</h1>
-        <span>
-          <a
-            href="https://www.facebook.com/pokebobaviera/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebookF className="facebook-icon" />
-          </a>
-        </span>
-      </div>
-      <div className="find__contact">
-        <p>
-          <FaPhone /> {data.site.siteMetadata.phone}
-        </p>
-        <p>
-          <FaMapMarkerAlt /> {data.site.siteMetadata.address}
-        </p>
-      </div>
-      {/* Netlify Form */}
-      <div className="find__forms">
-        <ContactUs />
+    <section id="findUs">
+      <div className="container">
+        {isDesktop && <GoogleMap />}
+        <div className="find__links">
+          <h1>Follow Us</h1>
+          <span>
+            <a
+              href="https://www.facebook.com/pokebobaviera/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF className="facebook-icon" />
+            </a>
+          </span>
+        </div>
+        <div className="find__contact">
+          <p>
+            <FaPhone /> {data.site.siteMetadata.phone}
+          </p>
+          <p>
+            <FaMapMarkerAlt /> {data.site.siteMetadata.address}
+          </p>
+        </div>
         {/* Netlify Form */}
+        <div className="find__forms">
+          <ContactUs />
+          {/* Netlify Form */}
+        </div>
       </div>
     </section>
   )

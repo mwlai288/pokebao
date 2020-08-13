@@ -16,27 +16,31 @@ const Menu = () => {
 
   return (
     <>
-      <section id="menu" className="menu">
-        <h4 className="menu__title">Our Menu</h4>
-        <img
-          src="http://placekitten.com/400/300"
-          alt="menu"
-          className="menu__image"
-        />
-      </section>
-      <section className="info">
-        <article className="info__poke">
-          <h3>Poké</h3>
-          <p>{data.site.siteMetadata.poke}</p>
-        </article>
-        <article className="info__bao">
-          <h3>Bao</h3>
-          <p>{data.site.siteMetadata.bao}</p>
-        </article>
-        <article className="info__boba">
-          <h3>Boba</h3>
-          <p>{data.site.siteMetadata.boba}</p>
-        </article>
+      <section id="menu">
+        <div className="container">
+          <div className="menu">
+            <h4 className="title">Menu</h4>
+            <img
+              src="http://placekitten.com/400/300"
+              alt="menu"
+              className="menu__image"
+            />
+            <section className="info">
+              <article>
+                <h3 className="menu__heading">Poké</h3>
+                <p>{data.site.siteMetadata.poke}</p>
+              </article>
+              <article >
+                <h3 className="menu__heading">Bao</h3>
+                <p>{data.site.siteMetadata.bao}</p>
+              </article>
+              <article >
+                <h3 className="menu__heading">Boba</h3>
+                <p>{data.site.siteMetadata.boba}</p>
+              </article>
+            </section>
+          </div>
+        </div>
       </section>
     </>
   )

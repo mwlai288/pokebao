@@ -17,22 +17,26 @@ const About = () => {
   `)
 
   return (
-    <section id="about" className="about">
-      <h3 className="about__title">About Us</h3>
-      <article className="about__message">
-        {data.site.siteMetadata.about}
-      </article>
-      <figure className="us">
-        <figcaption className="us__text">
-          <div className="us__text--header">What do you get when...</div>
-          {data.site.siteMetadata.story}
-        </figcaption>
-        <img
-          src={logo}
-          alt={data.site.siteMetadata.title}
-          className="us__image"
-        />
-      </figure>
+    <section id="about">
+      <div className="container">
+        <div className="about">
+          <h3 className="title">About Us</h3>
+          <article className="about__message">
+            {data.site.siteMetadata.about}
+          </article>
+          <figure>
+            <figcaption className="us">
+              <h3 className="us__text--header">What do you get when </h3>
+              <p className="us__text--body">{data.site.siteMetadata.story}</p>
+            </figcaption>
+            <img
+              src={logo}
+              alt={data.site.siteMetadata.title}
+              className="us__image"
+            />
+          </figure>
+        </div>
+      </div>
     </section>
   )
 }
