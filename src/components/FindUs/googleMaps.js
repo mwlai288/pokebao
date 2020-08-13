@@ -1,29 +1,41 @@
-import React, { useState } from "react"
-import GoogleMapReact from "google-map-react"
-import Marker from "./Marker"
+import React from "react"
+import { Map, GoogleApiWrapper, Marker } from "google-maps-react"
 
-const GoogleMap = props => {
-  const isClient = typeof window !== "undefined"
-  const [center, setCenter] = useState({ lat: 28.243607, lng: -80.726559 })
-  const [zoom, setZoom] = useState(18)
+const MapContainer = props => {
+  const mapStyles = {
+    width: "100%",
+    height: "50%",
+  }
+
+  const containerStyle = {
+    position: "relative",
+    width: "100%",
+    height: "100%",
+  }
+
+  const markerClick = () => {
+    console.log("i clicked the marker")
+  }
+
   return (
-    <div className="find__map">
-      {isClient && (
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API_KEY }}
-          defaultCenter={center}
-          defaultZoom={zoom}
-        >
-          <Marker
-            lat={center.lat}
-            lng={center.lng}
-            text="Marker"
-            color="blue"
-          />
-        </GoogleMapReact>
-      )}
-    </div>
+    <>
+      <Map
+        google={props.google}
+        zoom={20}
+        style={mapStyles}
+        // containerStyle={containerStyle}
+        initialCenter={{ lat: 28.243607, lng: -80.726559 }}
+        // visible={false}
+      >
+        <Marker
+          position={{ lat: 28.243607, lng: -80.726559 }}
+          onClick={markerClick}
+        />
+      </Map>
+    </>
   )
 }
 
-export default GoogleMap
+export default GoogleApiWrapper({
+  apiKey: process.env.GOOGLE_MAPS_API_KEY,
+})(MapContainer)
