@@ -10,6 +10,7 @@ module.exports = {
     boba: `“Boba Tea” (also known as Bubble Tea, Pearl Milk Tea, or Tapioca Tea) in its most basic form is a tea based drink, usually made with green or black tea and can be customized with an assortment of milks, fruit flavors and toppings. The boba pearls give the drink its unique taste and texture and is a form of starch that comes from a cassava root. It is soft, chewy, slightly sweet, and gluten-free! Boba is slightly sweet and is marinated with brown sugar for flavor. We like to think of the Boba as a gummy bear that adapts to the flavor of your drink as it absorbs the drink’s essence.`,
     address: `2270 Town Center Ave, Viera, Florida 32940`,
     phone: `321.210.5788`,
+    email: `contact@pokebobaviera.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

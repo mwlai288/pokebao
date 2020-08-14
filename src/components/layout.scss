@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kristi&family=Lato:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kristi&family=Lato:wght@300;400&display=swap");
 
 // COLORS //
 $title-color: #cfa670;
@@ -34,7 +34,7 @@ img {
 }
 
 section {
-  padding: 2.5em 0;
+  padding: 2em 0;
 }
 
 .title {
@@ -94,6 +94,7 @@ section {
 .about {
   background-color: $tertiary-color;
   border-radius: 25px;
+  box-shadow: 0 19px 19px rgba(0, 0, 0, 0.26);
   padding: 1em;
   position: relative;
   width: 100%;
@@ -128,22 +129,32 @@ section {
 }
 
 .menu {
-  background-color: $tertiary-color;
-  border-radius: 25px;
+  // background-color: $tertiary-color;
+  // border-radius: 25px;
+  // box-shadow: 0 19px 19px rgba(0, 0, 0, 0.26);
   padding: 1em;
   position: relative;
   width: 100%;
-  margin-top: -2rem;
+
   .title {
-    position: absolute;
-    top: -8.5rem;
-    left: 0;
+    text-align: center;
+    margin: 0;
+
+    // position: absolute;
+    // top: -8.5rem;
+    // left: 0;
     font-size: 4rem;
+  }
+
+  .info {
+    background-color: $tertiary-color;
+    border-radius: 25px;
+    box-shadow: 0 19px 19px rgba(0, 0, 0, 0.26);
   }
 
   &__image {
     margin-top: 2rem;
-  } 
+  }
 
   &__heading {
     font-size: 1.8rem;
@@ -155,5 +166,45 @@ section {
 
   p {
     font-size: 1.3rem;
+  }
+}
+
+.images {
+  margin-top: -2rem;
+  .title {
+    font-size: 4rem;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .image:not(:last-child) {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 754px) {
+  .about {
+    // display: flex;
+    &__message {
+      max-width: 590px;
+    }
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .us {
+      &__image {
+        width: 500px;
+        text-align: center;
+        max-width: 700px;
+      }
+      &__text--body {
+        max-width: 541px;
+      }
+    }
   }
 }

@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import GoogleMap from "./googleMaps"
-import { FaFacebookF, FaPhone, FaMapMarkerAlt } from "react-icons/fa"
+import {
+  FaFacebookF,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaInstagram,
+  FaMailBulk,
+} from "react-icons/fa"
 import ContactUs from "./contactUs"
 
 const FindUs = () => {
@@ -11,6 +17,7 @@ const FindUs = () => {
         siteMetadata {
           phone
           address
+          email
         }
       }
     }
@@ -40,19 +47,33 @@ const FindUs = () => {
               <FaFacebookF className="facebook-icon" />
             </a>
           </span>
+          <span>
+            <a
+              href="https://www.instagram.com/pokebobaviera/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="instagram-icon" />
+            </a>
+          </span>
         </div>
         <div className="find__contact">
           <p>
             <FaPhone /> {data.site.siteMetadata.phone}
           </p>
           <p>
-            <FaMapMarkerAlt /> {data.site.siteMetadata.address}
+            <FaMailBulk /> {data.site.siteMetadata.email}
           </p>
         </div>
-        {/* Netlify Form */}
+
         <div className="find__forms">
-          <ContactUs />
-          {/* Netlify Form */}
+          {isDesktop ? (
+            <GoogleMap />
+          ) : (
+            <p className="find__email">
+              <FaMapMarkerAlt /> {data.site.siteMetadata.address}
+            </p>
+          )}
         </div>
       </div>
     </section>

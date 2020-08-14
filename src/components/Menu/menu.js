@@ -30,11 +30,11 @@ const Menu = () => {
                 <h3 className="menu__heading">Poké</h3>
                 <p>{data.site.siteMetadata.poke}</p>
               </article>
-              <article >
+              <article>
                 <h3 className="menu__heading">Bao</h3>
                 <p>{data.site.siteMetadata.bao}</p>
               </article>
-              <article >
+              <article>
                 <h3 className="menu__heading">Boba</h3>
                 <p>{data.site.siteMetadata.boba}</p>
               </article>
