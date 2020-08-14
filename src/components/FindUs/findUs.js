@@ -36,44 +36,50 @@ const FindUs = () => {
     <section id="findUs">
       <div className="container">
         {isDesktop && <GoogleMap />}
-        <div className="find__links">
-          <h1>Follow Us</h1>
-          <span>
-            <a
-              href="https://www.facebook.com/pokebobaviera/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaFacebookF className="facebook-icon" />
-            </a>
-          </span>
-          <span>
-            <a
-              href="https://www.instagram.com/pokebobaviera/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram className="instagram-icon" />
-            </a>
-          </span>
-        </div>
-        <div className="find__contact">
-          <p>
-            <FaPhone /> {data.site.siteMetadata.phone}
-          </p>
-          <p>
-            <FaMailBulk /> {data.site.siteMetadata.email}
-          </p>
-        </div>
+        <div className="find-us">
+          <div className="find-us__social">
+            <h1>Follow us on Facebook & Instagram</h1>
+            <div className="find-us__links">
+              <a
+                href="https://www.facebook.com/pokebobaviera/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="facebook-icon"
+              >
+                <FaFacebookF />
+              </a>
 
-        <div className="find__forms">
-          {isDesktop ? (
-            <GoogleMap />
-          ) : (
-            <p className="find__email">
-              <FaMapMarkerAlt /> {data.site.siteMetadata.address}
-            </p>
-          )}
+              <a
+                href="https://www.instagram.com/pokebobaviera/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="instagram-icon"
+              >
+                <FaInstagram />
+              </a>
+            </div>
+          </div>
+          <div className="find-us__contact">
+            <div>
+              <FaPhone /> {data.site.siteMetadata.phone}
+            </div>
+            <div>
+              <FaMailBulk /> {data.site.siteMetadata.email}
+            </div>
+          </div>
+
+          <div className="find-us__location">
+            {isDesktop ? (
+              <GoogleMap />
+            ) : (
+              <>
+                <FaMapMarkerAlt />
+                <p className="find-us__email">
+                  {data.site.siteMetadata.address}
+                </p>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </section>
