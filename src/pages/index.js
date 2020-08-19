@@ -6,15 +6,20 @@ import About from "../components/About/about"
 import Menu from "../components/Menu/menu"
 import Image from "../components/Gallery/image"
 import FindUs from "../components/FindUs/findUs"
+import Footer from "../components/Footer/footer"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO
+      title="Poké Boba"
+      description="Get delicious poké bowls made to order or create your own. Try our baos. Pair with boba tea"
+    />
     <Hero />
     <About />
     <Menu />
     <Image />
     <FindUs />
+    <Footer />
   </Layout>
 )
 

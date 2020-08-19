@@ -11,6 +11,11 @@ module.exports = {
     address: `2270 Town Center Ave, Viera, Florida 32940`,
     phone: `321.210.5788`,
     email: `contact@pokebobaviera.com`,
+    url: `http://pokebobaviera.com/`,
+    image: "/example7.png",
+    lat: 28.243607,
+    lng: -80.726559,
+    keywords: ["poke bowl", "poke", "boba", "boba tea", "bao", "poké boba"],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -36,5 +41,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `13519301650`,
+      },
+    },
   ],
 }

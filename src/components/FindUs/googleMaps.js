@@ -1,38 +1,36 @@
 import React from "react"
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react"
-
+// import { useStaticQuery, graphql } from "gatsby"
 const MapContainer = props => {
-  const mapStyles = {
-    width: "100%",
-    height: "50%",
-  }
+  // const data = useStaticQuery(graphql`
+  //   query SiteLocationQuery {
+  //     site {
+  //       siteMetadata {
+  //         lat
+  //         lng
+  //
+  //     }
+  //   }
+  // `)
 
-  const containerStyle = {
-    position: "relative",
-    width: "100%",
-    height: "100%",
-  }
-
-  const markerClick = () => {
-    console.log("i clicked the marker")
+  const style = {
+    width: "85%",
+    height: "350px",
+    // marginLeft: "60rem",
+    // marginTop: "-25.8rem",
   }
 
   return (
-    <>
+    <section id="map">
       <Map
         google={props.google}
         zoom={20}
-        style={mapStyles}
-        // containerStyle={containerStyle}
+        style={style}
         initialCenter={{ lat: 28.243607, lng: -80.726559 }}
-        // visible={false}
       >
-        <Marker
-          position={{ lat: 28.243607, lng: -80.726559 }}
-          onClick={markerClick}
-        />
+        <Marker position={{ lat: 28.243607, lng: -80.726559 }} />
       </Map>
-    </>
+    </section>
   )
 }
 

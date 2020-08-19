@@ -1,5 +1,5 @@
 import React from "react"
-import img from "../../images/PokeBoba.jpg"
+import img from "../../images/PokeBoba.png"
 
 const DesktopNav = ({ title }) => {
   return (

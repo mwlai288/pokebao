@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import logo from "../../images/PokeBoba.jpg"
+import logo from "../../images/PokeBoba.png"
 
 const About = () => {
   const data = useStaticQuery(graphql`

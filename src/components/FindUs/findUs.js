@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import GoogleMap from "./googleMaps"
+
 import {
   FaFacebookF,
   FaPhone,
@@ -9,6 +9,7 @@ import {
   FaMailBulk,
 } from "react-icons/fa"
 import ContactUs from "./contactUs"
+import GoogleMaps from "./googleMaps"
 
 const FindUs = () => {
   const data = useStaticQuery(graphql`
@@ -35,51 +36,54 @@ const FindUs = () => {
   return (
     <section id="findUs">
       <div className="container">
-        {isDesktop && <GoogleMap />}
         <div className="find-us">
           <div className="find-us__social">
-            <h1>Follow us on Facebook & Instagram</h1>
-            <div className="find-us__links">
+            <span>
               <a
                 href="https://www.facebook.com/pokebobaviera/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="facebook-icon"
               >
-                <FaFacebookF />
+                <FaFacebookF className="facebook-icon" />
               </a>
-
+            </span>
+            <span>
               <a
                 href="https://www.instagram.com/pokebobaviera/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="instagram-icon"
               >
-                <FaInstagram />
+                <FaInstagram className="instagram-icon" />
               </a>
-            </div>
+            </span>
           </div>
-          <div className="find-us__contact">
-            <div>
-              <FaPhone /> {data.site.siteMetadata.phone}
-            </div>
-            <div>
-              <FaMailBulk /> {data.site.siteMetadata.email}
-            </div>
+        </div>
+        <div className="find-us__contact">
+          <h4>Contact Us</h4>
+          <div>
+            <FaPhone /> {data.site.siteMetadata.phone}
           </div>
-
-          <div className="find-us__location">
-            {isDesktop ? (
-              <GoogleMap />
-            ) : (
-              <>
-                <FaMapMarkerAlt />
-                <p className="find-us__email">
-                  {data.site.siteMetadata.address}
-                </p>
-              </>
-            )}
+          <div>
+            <FaMailBulk />
+            <a
+              href="mailto:{data.site.siteMetadata.email}"
+              className="find-us__email"
+            >
+              Email Us
+            </a>
           </div>
+        </div>
+        <div className="find-us__location">
+          {isDesktop ? (
+            <GoogleMaps />
+          ) : (
+            <>
+              <FaMapMarkerAlt />
+              <p className="find-us__address">
+                {data.site.siteMetadata.address}
+              </p>
+            </>
+          )}
         </div>
       </div>
     </section>

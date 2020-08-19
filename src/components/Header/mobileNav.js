@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import img from "../../images/PokeBoba.jpg"
+import img from "../../images/PokeBoba.png"
 import { useSpring, animated } from "react-spring"
 
 const MobileNav = ({ title }) => {
