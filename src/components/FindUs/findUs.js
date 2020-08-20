@@ -8,7 +8,7 @@ import {
   FaInstagram,
   FaMailBulk,
 } from "react-icons/fa"
-import ContactUs from "./contactUs"
+// import ContactUs from "./contactUs"
 import GoogleMaps from "./googleMaps"
 
 const FindUs = () => {
@@ -24,13 +24,15 @@ const FindUs = () => {
     }
   `)
 
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 768)
-  const updateMedia = () => {
-    setDesktop(window.innerWidth > 768)
-  }
+  const [width, setWidth] = useState(window.innerWidth)
+
   useEffect(() => {
-    window.addEventListener("resize", updateMedia)
-    return () => window.removeEventListener("resize", updateMedia)
+    if (typeof window === "undefined") return
+    const handleResize = () => setWidth(window.innerWidth > 768)
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
   })
 
   return (
@@ -74,7 +76,7 @@ const FindUs = () => {
           </div>
         </div>
         <div className="find-us__location">
-          {isDesktop ? (
+          {width ? (
             <GoogleMaps />
           ) : (
             <>

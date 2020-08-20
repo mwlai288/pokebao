@@ -412,7 +412,11 @@ section {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 230px);
-      grid-gap: 0.5em;
+      gap: 1rem 1rem;
+      // .image {
+      //   height: 350px;
+      //   width: 350px;
+      // }
     }
   }
   .menu {

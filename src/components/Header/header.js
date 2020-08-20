@@ -4,20 +4,22 @@ import DesktopNav from "./desktopNav"
 import MobileNav from "./mobileNav"
 
 const Header = ({ siteTitle }) => {
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 768)
-  const updateMedia = () => {
-    setDesktop(window.innerWidth > 768)
-  }
+  const [width, setWidth] = useState(window.innerWidth)
+
   useEffect(() => {
-    window.addEventListener("resize", updateMedia)
-    return () => window.removeEventListener("resize", updateMedia)
+    if (typeof window === "undefined") return
+    const handleResize = () => setWidth(window.innerWidth > 768)
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
   })
 
   return (
     <header>
       <nav className="wrapper">
         <div className="container">
-          {isDesktop ? (
+          {width ? (
             <DesktopNav title={siteTitle} />
           ) : (
             <MobileNav title={siteTitle} />

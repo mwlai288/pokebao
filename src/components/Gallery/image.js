@@ -5,29 +5,39 @@ import { useStaticQuery, graphql } from "gatsby"
 const Image = () => {
   const data = useStaticQuery(graphql`
     {
-      allInstaNode(limit: 12) {
+      allFile(filter: { relativePath: { regex: "/example/" } }) {
         edges {
           node {
-            id
-            localFile {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
+            childImageSharp {
+              fluid(maxHeight: 450) {
+                ...GatsbyImageSharpFluid
               }
+              id
             }
           }
         }
       }
     }
   `)
+
   return (
     <section id="gallery">
       <div className="container">
         <div className="images">
           <h3 className="title">Instagram</h3>
           <div className="images__container">
-            {data.allInstaNode.edges.map(edge => {
+            {data.allFile.edges.map(edge => {
+              return (
+                <React.Fragment key={edge.node.id}>
+                  <Img
+                    fluid={edge.node.childImageSharp.fluid}
+                    alt="images"
+                    // className="image"
+                  />
+                </React.Fragment>
+              )
+            })}
+            {/* {data.allInstaNode.edges.map(edge => {
               return (
                 <React.Fragment key={edge.node.id}>
                   <Img
@@ -37,7 +47,7 @@ const Image = () => {
                   />
                 </React.Fragment>
               )
-            })}
+            })} */}
           </div>
         </div>
       </div>
@@ -46,3 +56,18 @@ const Image = () => {
 }
 
 export default Image
+
+// allInstaNode(limit: 12) {
+//   edges {
+//     node {
+//       id
+//       localFile {
+//         childImageSharp {
+//           fluid {
+//             ...GatsbyImageSharpFluid
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
