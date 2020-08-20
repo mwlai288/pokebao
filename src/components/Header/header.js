@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useLayoutEffect } from "react"
 import PropTypes from "prop-types"
 import DesktopNav from "./desktopNav"
 import MobileNav from "./mobileNav"
 
 const Header = ({ siteTitle }) => {
-  const [width, setWidth] = useState(window.innerWidth)
+  const [width, setWidth] = useState()
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (typeof window === "undefined") return
     const handleResize = () => setWidth(window.innerWidth > 768)
     window.addEventListener("resize", handleResize)

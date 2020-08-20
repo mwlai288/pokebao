@@ -19,7 +19,6 @@ const Image = () => {
       }
     }
   `)
-
   return (
     <section id="gallery">
       <div className="container">
@@ -28,11 +27,11 @@ const Image = () => {
           <div className="images__container">
             {data.allFile.edges.map(edge => {
               return (
-                <React.Fragment key={edge.node.id}>
+                <React.Fragment key={edge.node.childImageSharp.id}>
                   <Img
                     fluid={edge.node.childImageSharp.fluid}
                     alt="images"
-                    // className="image"
+                    className="image"
                   />
                 </React.Fragment>
               )

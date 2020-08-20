@@ -41,7 +41,8 @@ section {
 
 .title {
   font-family: "Kristi", cursive, sans-serif;
-  color: $title-color;
+  color: black;
+  font-weight: 100;
 }
 
 .container {
@@ -282,6 +283,7 @@ section {
 
   .image {
     margin-bottom: 1em;
+    border: 0.4px solid black;
     height: 350px;
   }
 
@@ -411,12 +413,11 @@ section {
     &__container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 230px);
-      gap: 1rem 1rem;
-      // .image {
-      //   height: 350px;
-      //   width: 350px;
-      // }
+      grid-template-rows: repeat(3, 1fr);
+      gap: 0.5rem;
+      .image {
+        border: 0.4px solid black;
+      }
     }
   }
   .menu {

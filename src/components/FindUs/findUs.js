@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useLayoutEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import {
@@ -24,16 +24,16 @@ const FindUs = () => {
     }
   `)
 
-  const [width, setWidth] = useState(window.innerWidth)
+  const [width, setWidth] = useState()
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (typeof window === "undefined") return
     const handleResize = () => setWidth(window.innerWidth > 768)
     window.addEventListener("resize", handleResize)
     return () => {
       window.removeEventListener("resize", handleResize)
     }
-  })
+  }, [])
 
   return (
     <section id="findUs">
