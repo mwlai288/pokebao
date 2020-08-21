@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from "react"
+import React, { useLayoutEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import {
@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa"
 // import ContactUs from "./contactUs"
 import GoogleMaps from "./googleMaps"
+import { useWindowSize } from "../../hooks/Hooks"
 
 const FindUs = () => {
   const data = useStaticQuery(graphql`
@@ -24,16 +25,16 @@ const FindUs = () => {
     }
   `)
 
-  const [width, setWidth] = useState()
+  const isDesktop = useWindowSize()
 
-  useLayoutEffect(() => {
-    if (typeof window === "undefined") return
-    const handleResize = () => setWidth(window.innerWidth > 768)
-    window.addEventListener("resize", handleResize)
-    return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [])
+  // useLayoutEffect(() => {
+  //   if (typeof window === "undefined") return
+  //   const handleResize = () => setWidth(window.innerWidth > 768)
+  //   window.addEventListener("resize", handleResize)
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize)
+  //   }
+  // }, [])
 
   return (
     <section id="findUs">
@@ -76,7 +77,7 @@ const FindUs = () => {
           </div>
         </div>
         <div className="find-us__location">
-          {width ? (
+          {isDesktop.width > 768 ? (
             <GoogleMaps />
           ) : (
             <>
