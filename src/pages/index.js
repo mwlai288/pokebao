@@ -6,7 +6,7 @@ import About from "../components/About/about"
 import Menu from "../components/Menu/menu"
 import Image from "../components/Gallery/image"
 import FindUs from "../components/FindUs/findUs"
-import Footer from "../components/Footer/footer"
+// import Footer from "../components/Footer/footer"
 
 const IndexPage = () => (
   <Layout>
