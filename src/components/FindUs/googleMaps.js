@@ -1,23 +1,9 @@
 import React from "react"
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react"
-// import { useStaticQuery, graphql } from "gatsby"
 const MapContainer = props => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteLocationQuery {
-  //     site {
-  //       siteMetadata {
-  //         lat
-  //         lng
-  //
-  //     }
-  //   }
-  // `)
-
   const style = {
     width: "85%",
     height: "350px",
-    // marginLeft: "60rem",
-    // marginTop: "-25.8rem",
   }
 
   return (
