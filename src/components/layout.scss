@@ -158,12 +158,19 @@ section {
   }
 
   button {
-    font-size: 2em;
-    height: 2em;
+    font-size: 2rem;
+    height: 5rem;
+    width: 24rem;
+    padding-left: 3.6rem;
+    padding-right: 3.6rem;
     border-radius: 10px;
-
+    background-color: $primary-color;
+    color: #ffffff;
     a {
       text-decoration: none;
+      &:visited {
+        color: #ffffff;
+      }
     }
   }
 
