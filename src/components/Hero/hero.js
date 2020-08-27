@@ -23,7 +23,13 @@ const Hero = () => {
             </h1>
             <p className="headline__container--options">Poké | Buns | Boba</p>
             <button>
-              <a href="#!">Order Now</a>
+              <a
+                href="https://www.toasttab.com/pokebao-melbourne"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Order Now
+              </a>
             </button>
           </div>
         </div>

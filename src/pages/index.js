@@ -19,7 +19,7 @@ const IndexPage = () => (
     <Menu />
     <Image />
     <FindUs />
-    <Footer />
+    {/* <Footer /> */}
   </Layout>
 )
 

@@ -64,7 +64,7 @@ section {
   }
 
   &__burger {
-    background-color: #000000;
+    background-color: $secondary-color;
     height: 3px;
     width: 30px;
     position: relative;
@@ -72,21 +72,21 @@ section {
     cursor: pointer;
     & > span::before {
       content: "";
-      background-color: #000000;
+      background-color: $secondary-color;
       position: absolute;
       top: -8px;
       width: 30px;
       height: 3px;
-      z-index: 1;
+      z-index: 1000;
     }
     & > span::after {
       content: "";
-      background-color: #000000;
+      background-color: $secondary-color;
       position: absolute;
       top: 8px;
       width: 30px;
       height: 3px;
-      z-index: 1;
+      z-index: 1000;
     }
   }
 }
@@ -98,7 +98,7 @@ section {
   top: 0;
   bottom: 0;
   padding: 100px;
-  background: $secondary-color;
+  background: $primary-color;
   z-index: 1;
 
   &__container {

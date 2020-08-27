@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import {
@@ -26,15 +26,6 @@ const FindUs = () => {
   `)
 
   const isDesktop = useWindowSize()
-
-  // useLayoutEffect(() => {
-  //   if (typeof window === "undefined") return
-  //   const handleResize = () => setWidth(window.innerWidth > 768)
-  //   window.addEventListener("resize", handleResize)
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize)
-  //   }
-  // }, [])
 
   return (
     <section id="findUs">
@@ -66,7 +57,7 @@ const FindUs = () => {
           <div>
             <FaPhone /> {data.site.siteMetadata.phone}
           </div>
-          <div>
+          {/* <div>
             <FaMailBulk />
             <a
               href="mailto:{data.site.siteMetadata.email}"
@@ -74,7 +65,7 @@ const FindUs = () => {
             >
               Email Us
             </a>
-          </div>
+          </div> */}
         </div>
         <div className="find-us__location">
           {isDesktop.width > 768 ? (

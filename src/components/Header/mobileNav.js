@@ -5,8 +5,13 @@ import { useSpring, animated } from "react-spring"
 const MobileNav = ({ title }) => {
   const [isToggled, setIsToggled] = useState(false)
 
+  const open = isToggled ? "open" : null
+
   const navAnimation = useSpring({
-    transform: isToggled ? `translate3d(0, 0, 0)` : `translate3d(0, -100%, 0)`,
+    opacity: isToggled ? 1 : 0,
+    transform: isToggled
+      ? `translate3d(0, 11%, 0)`
+      : `translate3d(0, -100%, 0)`,
   })
 
   return (
@@ -17,7 +22,7 @@ const MobileNav = ({ title }) => {
         </a>
 
         <div
-          className="mobile-navigation__burger"
+          className={`mobile-navigation__burger ${open}`}
           onClick={() => {
             setIsToggled(!isToggled)
           }}
