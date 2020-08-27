@@ -6,7 +6,7 @@ import {
   FaPhone,
   FaMapMarkerAlt,
   FaInstagram,
-  FaMailBulk,
+  // FaMailBulk,
 } from "react-icons/fa"
 // import ContactUs from "./contactUs"
 import GoogleMaps from "./googleMaps"
