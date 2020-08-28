@@ -20,10 +20,10 @@ const Image = () => {
     }
   `)
   return (
-    <section id="gallery">
+    <section id="gallery" tabIndex="0">
       <div className="container">
         <div className="images">
-          <h3 className="title">Instagram</h3>
+          <h1 className="title">Instagram</h1>
           <div className="images__container">
             {data.allFile.edges.map(edge => {
               return (

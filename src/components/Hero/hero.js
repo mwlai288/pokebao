@@ -17,10 +17,10 @@ const Hero = () => {
       <div className="hero-container">
         <div className="headline">
           <div className="headline__container">
-            <h3 className="headline__container--title">Welcome To</h3>
-            <h1 className="headline__container--name">
+            <h1 className="headline__container--title">Welcome To</h1>
+            <h2 className="headline__container--name">
               {data.site.siteMetadata.title}
-            </h1>
+            </h2>
             <p className="headline__container--options">Poké | Buns | Boba</p>
             <button>
               <a

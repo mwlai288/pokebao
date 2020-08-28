@@ -37,6 +37,7 @@ const FindUs = () => {
                 href="https://www.facebook.com/pokebobaviera/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
               >
                 <FaFacebookF className="facebook-icon" />
               </a>
@@ -46,6 +47,7 @@ const FindUs = () => {
                 href="https://www.instagram.com/pokebobaviera/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
               >
                 <FaInstagram className="instagram-icon" />
               </a>
@@ -53,7 +55,7 @@ const FindUs = () => {
           </div>
         </div>
         <div className="find-us__contact">
-          <h4>Contact Us</h4>
+          <h1>Contact Us</h1>
           <div>
             <FaPhone /> {data.site.siteMetadata.phone}
           </div>

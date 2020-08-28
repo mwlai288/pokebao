@@ -4,7 +4,6 @@ $title-color: #cfa670;
 $primary-color: #fe6a30;
 $secondary-color: #000;
 $tertiary-color: #beeaf4;
-$header-color: #efc337;
 
 // COLORS //
 
@@ -142,7 +141,7 @@ section {
   &__container--title {
     margin: 0;
     font-size: 6.5rem;
-    color: $header-color;
+    color: $secondary-color;
     font-family: "Kristi", cursive;
   }
 
@@ -164,9 +163,9 @@ section {
     padding-left: 3.6rem;
     padding-right: 3.6rem;
     border-radius: 10px;
-    background-color: $primary-color;
-    color: #ffffff;
+    background-color: #311409;
     a {
+      color: #ffffff;
       text-decoration: none;
       &:visited {
         color: #ffffff;

@@ -17,16 +17,16 @@ const About = () => {
   `)
 
   return (
-    <section id="about">
+    <section id="about" tabIndex="0">
       <div className="container">
         <div className="about">
-          <h3 className="title">About Us</h3>
+          <h1 className="title">About Us</h1>
           <article className="about__message">
             {data.site.siteMetadata.about}
           </article>
           <figure>
             <figcaption className="us">
-              <h3 className="us__text--header">What do you get when </h3>
+              <h2 className="us__text--header">What do you get when </h2>
               <p className="us__text--body">{data.site.siteMetadata.story}</p>
             </figcaption>
             <img
