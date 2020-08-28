@@ -47,5 +47,6 @@ module.exports = {
         username: `13519301650`,
       },
     },
+    `gatsby-plugin-netlify`,
   ],
 }
