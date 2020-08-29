@@ -17,7 +17,7 @@ const About = () => {
   `)
 
   return (
-    <section id="about" tabIndex="0">
+    <section id="about">
       <div className="container">
         <div className="about">
           <h1 className="title">About Us</h1>

@@ -27,7 +27,7 @@ const Menu = () => {
   `)
 
   return (
-    <section id="menu" tabIndex="0">
+    <section id="menu">
       <div className="container">
         <div className="menu">
           <h1 className="title">Menu</h1>
@@ -46,7 +46,7 @@ const Menu = () => {
             alt="menu2"
           />
           {/* </label> */}
-          <section className="info" tabIndex="0">
+          <section className="info">
             <div className="info__options">
               <h2 className="menu__heading">Poké</h2>
               <p>{data.site.siteMetadata.poke}</p>

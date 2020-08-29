@@ -1,3 +1,6 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: `Poké Boba`,
@@ -41,12 +44,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        username: `13519301650`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-instagram`,
+    //   options: {
+    //     username: `13519301650`,
+    //   },
+    // },
     `gatsby-plugin-netlify`,
   ],
 }
