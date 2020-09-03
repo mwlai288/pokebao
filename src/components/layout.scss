@@ -426,6 +426,14 @@ section {
       }
     }
   }
+
+  .footer {
+    margin-top: 60rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 820px) {
   .menu {
     .info {
       flex-direction: row;
@@ -439,9 +447,5 @@ section {
         padding: $text-padding-sides;
       }
     }
-  }
-  .footer {
-    margin-top: 60rem;
-    font-size: 1.6rem;
   }
 }
