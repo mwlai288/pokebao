@@ -38,7 +38,7 @@ const FindUs = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-              >
+              > 
                 <FaFacebookF className="facebook-icon" />
               </a>
             </span>
@@ -71,7 +71,7 @@ const FindUs = () => {
         </div>
         <div className="find-us__location">
           {isDesktop.width > 768 ? (
-            <GoogleMaps />
+           <div> poop </div>
           ) : (
             <>
               <FaMapMarkerAlt />
@@ -82,6 +82,7 @@ const FindUs = () => {
           )}
         </div>
       </div>
+      <GoogleMaps />
     </section>
   )
 }
