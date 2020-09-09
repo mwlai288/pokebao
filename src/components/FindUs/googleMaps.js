@@ -24,28 +24,28 @@
 // export default GoogleApiWrapper({
 //   apiKey: process.env.GOOGLE_MAPS_API_KEY,
 // })(MapContainer)
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 const GoogleMaps = () => {
   const data = useStaticQuery(graphql`
-  query StaticMapQuery {
-    staticMap {
-      childFile {
-        childImageSharp {
-          fixed(width: 400) {
-            ...GatsbyImageSharpFixed
+    query StaticMapQuery {
+      staticMap {
+        childFile {
+          childImageSharp {
+            fixed(width: 400) {
+              ...GatsbyImageSharpFixed
+            }
           }
         }
       }
     }
-  }  
   `)
-console.log(data)
+
   return (
     <>
-    <Img fixed={data.staticMap.childFile.childImageSharp.fixed} />
+      <Img fixed={data.staticMap.childFile.childImageSharp.fixed} />
     </>
   )
 }
