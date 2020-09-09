@@ -20,7 +20,7 @@ const Image = () => {
     }
   `)
   return (
-    <section id="gallery" tabIndex="0">
+    <section id="gallery">
       <div className="container">
         <div className="images">
           <h1 className="title">Instagram</h1>
