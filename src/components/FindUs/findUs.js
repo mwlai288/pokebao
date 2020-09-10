@@ -22,44 +22,48 @@ const FindUs = () => {
           email
         }
       }
+      staticMap {
+        mapUrl
+      }
     }
   `)
-
+  console.log(data.staticMap.mapUrl)
   const isDesktop = useWindowSize()
 
   return (
     <section id="findUs">
       <div className="container">
         <div className="find-us">
-          <div className="find-us__social">
-            <span>
-              <a
-                href="https://www.facebook.com/pokebobaviera/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <FaFacebookF className="facebook-icon" />
-              </a>
-            </span>
-            <span>
-              <a
-                href="https://www.instagram.com/pokebobaviera/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <FaInstagram className="instagram-icon" />
-              </a>
-            </span>
-          </div>
-        </div>
-        <div className="find-us__contact">
-          <h1>Contact Us</h1>
           <div>
-            <FaPhone /> {data.site.siteMetadata.phone}
-          </div>
-          {/* <div>
+            <div className="find-us__social">
+              <span>
+                <a
+                  href="https://www.facebook.com/pokebobaviera/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
+                  <FaFacebookF className="facebook-icon" />
+                </a>
+              </span>
+              <span>
+                <a
+                  href="https://www.instagram.com/pokebobaviera/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram className="instagram-icon" />
+                </a>
+              </span>
+            </div>
+
+            <div className="find-us__contact">
+              <h1>Contact Us</h1>
+              <div>
+                <FaPhone /> {data.site.siteMetadata.phone}
+              </div>
+              {/* <div>
             <FaMailBulk />
             <a
               href="mailto:{data.site.siteMetadata.email}"
@@ -68,6 +72,8 @@ const FindUs = () => {
               Email Us
             </a>
           </div> */}
+            </div>
+          </div>
         </div>
         <div className="find-us__location">
           {isDesktop.width > 768 ? (
@@ -75,9 +81,14 @@ const FindUs = () => {
           ) : (
             <>
               <FaMapMarkerAlt />
-              <p className="find-us__address">
+              <a
+                href={data.staticMap.mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="find-us__address"
+              >
                 {data.site.siteMetadata.address}
-              </p>
+              </a>
             </>
           )}
         </div>
