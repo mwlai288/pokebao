@@ -51,21 +51,21 @@ module.exports = {
     //   },
     // },
     `gatsby-plugin-netlify`,
-    {
-      resolve: `@ccalamos/gatsby-source-googlemaps-static`,
-      options: {
-          key:  process.env.GATSBY_GOOGLE_API,
-          center: `28.243607, -80.726559`,
-          zoom: `20`,
-          markers: [
-            {
-              location: `28.243607, -80.726559`,
-              color: `red`,
-              size: `mid`,
-              label: `PB`
-            }
-          ]
-      },
-  },
+    //   {
+    //     resolve: `@ccalamos/gatsby-source-googlemaps-static`,
+    //     options: {
+    //         key:  process.env.GATSBY_GOOGLE_API,
+    //         center: `28.243607, -80.726559`,
+    //         zoom: `20`,
+    //         markers: [
+    //           {
+    //             location: `28.243607, -80.726559`,
+    //             color: `red`,
+    //             size: `mid`,
+    //             label: `PB`
+    //           }
+    //         ]
+    //     },
+    // },
   ],
 }
