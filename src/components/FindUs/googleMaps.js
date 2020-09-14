@@ -22,7 +22,7 @@ const MapContainer = props => {
 }
 
 export default GoogleApiWrapper({
-  apiKey: process.env.GOOGLE_MAPS_API_KEY,
+  apiKey: process.env.GATSBY_GOOGLE_API,
 })(MapContainer)
 // import React from "react"
 // import { useStaticQuery, graphql } from "gatsby"
