@@ -22,12 +22,9 @@ const FindUs = () => {
           email
         }
       }
-      staticMap {
-        mapUrl
-      }
     }
   `)
-  console.log(data.staticMap.mapUrl)
+
   const isDesktop = useWindowSize()
 
   return (
@@ -81,14 +78,14 @@ const FindUs = () => {
           ) : (
             <>
               <FaMapMarkerAlt />
-              <a
+              {/* <a
                 href={data.staticMap.mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="find-us__address"
-              >
-                {data.site.siteMetadata.address}
-              </a>
+              > */}
+              {data.site.siteMetadata.address}
+              {/* </a> */}
             </>
           )}
         </div>

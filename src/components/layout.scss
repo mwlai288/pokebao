@@ -435,19 +435,19 @@ section {
     }
   }
 
-  #findUs {
-    .container {
-      .find-us {
-        border-top: none;
-        &__location {
-          margin-top: 2rem;
-        }
-      }
-      border-top: 1px solid black;
-      display: flex;
-      justify-content: space-evenly;
-    }
-  }
+  // #findUs {
+  //   .container {
+  //     .find-us {
+  //       border-top: none;
+  //       &__location {
+  //         margin-top: 2rem;
+  //       }
+  //     }
+  //     border-top: 1px solid black;
+  //     display: flex;
+  //     justify-content: space-evenly;
+  //   }
+  // }
 
   .footer {
     margin-top: 60rem;
